@@ -7,7 +7,7 @@ public class Person {
 	private int id;
 	
 	private String login;
-	private int passhash;
+	private String password;
 	
 	private String name;
 	private String phone;
@@ -31,12 +31,12 @@ public class Person {
 		this.login = login;
 	}
 
-	public int getPasshash() {
-		return passhash;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasshash(int passhash) {
-		this.passhash = passhash;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getName() {

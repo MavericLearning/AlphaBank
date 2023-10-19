@@ -2,12 +2,17 @@ package com.alphabank.service;
 
 import java.util.Scanner;
 
+import com.alphabank.controller.CustomerController;
 import com.alphabank.model.Account;
 
 public class BankMain extends LoginImpl {
 
 	public static void main(String[] args) {
 	
+		CustomerController b1=new CustomerController();
+		//b1.createCustomer();
+        //b1.removeCustomer();
+		b1.findCustomerByID();
 		LoginImpl obj = new LoginImpl();
 		Bank objBank = new BankImp();
 		Account accountObj = new Account();
