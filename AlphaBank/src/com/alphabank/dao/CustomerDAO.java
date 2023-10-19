@@ -6,9 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
-import com.alphabank.model.Customer;
 import com.alphabank.connection.JDBCConnect;
+import com.alphabank.model.Customer;
 public class CustomerDAO {
 	
 	public boolean addCustomerDao(String login, String password, String name, String phone, String email, String dateStr) {

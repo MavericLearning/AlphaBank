@@ -1,7 +1,9 @@
 package com.alphabank.service;
 
 import java.util.List;
+import java.util.Scanner;
 
+import com.alphabank.dao.CustomerDAO;
 import com.alphabank.model.Account;
 import com.alphabank.model.Branch;
 import com.alphabank.model.Customer;
@@ -12,10 +14,37 @@ import com.alphabank.model.Transaction;
 public class BankImp implements Bank{
 
 	@Override
-	public boolean add(Customer customer) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean add(Customer customer) throws Exception {
+	    CustomerDAO custdao = new CustomerDAO();
+	    Scanner scanner = new Scanner(System.in);
+	    System.out.println("*********** Enter Customer Details to Create Customer ****************");
+
+	    // Gather customer information from the user
+	    System.out.print("Login: ");
+	    String login = scanner.next();
+
+	    System.out.print("Password: ");
+	    String password = scanner.next();
+
+	    System.out.print("Name: ");
+	    String name = scanner.next();
+
+	    System.out.print("Phone: ");
+	    String phone = scanner.next();
+
+	    System.out.print("Email: ");
+	    String email = scanner.next();
+
+	    System.out.print("Registration Date (dd/MM/yyyy): ");
+	    String dateStr = scanner.next();
+
+	    boolean success = custdao.addCustomerDao(login, password, name, phone, email, dateStr);
+		return success;
 	}
+
+
+		// TODO Auto-generated method stub
+	
 
 	@Override
 	public boolean add(Employee employee) {
@@ -133,10 +162,14 @@ public class BankImp implements Bank{
 
 	@Override
 	public boolean delete(Customer customer) {
-		// TODO Auto-generated method stub
-		return false;
+	    CustomerDAO custdao = new CustomerDAO();
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter ID to delete: ");
+		int customerId = scanner.nextInt();
+		        boolean success = custdao.deleteCustomerDao(customerId);
+		        return success;
+		
 	}
-
 	@Override
 	public boolean delete(Employee employee) {
 		// TODO Auto-generated method stub

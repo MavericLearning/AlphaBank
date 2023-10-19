@@ -7,7 +7,7 @@ import com.alphabank.model.*;
 public interface Bank {
 	
 	// Create
-	boolean add(Customer customer);
+	boolean add(Customer customer) throws Exception;
 	boolean add(Employee employee);
 	boolean add(Account account);
 	boolean add(Loan loan);
