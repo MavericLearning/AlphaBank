@@ -9,7 +9,7 @@ import com.alphabank.model.Account;
 import com.alphabank.model.Customer;
 import com.alphabank.service.BankImp;
 
-
+    
 public class CustomerController {
 	Scanner sc = new Scanner(System.in);
 	private int id;
