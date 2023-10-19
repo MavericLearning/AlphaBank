@@ -6,10 +6,11 @@ import com.alphabank.controller.CustomerController;
 
 public class BankMain extends LoginImpl {
 
+
 	public static void main(String[] args) throws Exception {
 		CustomerController b1=new CustomerController();
 		//b1.createCustomer();
-        //b1.removeCustomer();
+    //b1.removeCustomer();
 		b1.findCustomerByID();
 		LoginImpl obj = new LoginImpl();
 		Scanner input = new Scanner(System.in);

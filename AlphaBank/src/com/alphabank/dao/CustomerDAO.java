@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
 import com.alphabank.connection.JDBCConnect;
 import com.alphabank.model.Customer;
 public class CustomerDAO {
