@@ -11,6 +11,8 @@ public class Loan {
 	
 	private Branch branch;
 	
+	private String LoanType;
+	
 	private Date startingDate;
 	
 	private Date dueDate;
@@ -63,6 +65,14 @@ public class Loan {
 
 	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
+	}
+
+	public String getLoanType() {
+		return LoanType;
+	}
+
+	public void setLoanType(String loanType) {
+		LoanType = loanType;
 	}
 	
 }
